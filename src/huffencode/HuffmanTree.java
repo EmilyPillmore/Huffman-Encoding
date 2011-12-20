@@ -354,12 +354,13 @@ public class HuffmanTree {
 	    
 	    Node n = symbols.get(ch);
 	    while(n.parent != null){
-	    	if(n.parent.leftChild == n)
+	    	if(n.parent.leftChild == n){
 	    		CODE.concat("0");
-	    	else if(n.parent.rightChild == n)
+	    	}
+	    	else if(n.parent.rightChild == n){
 	    		CODE.concat("1");
-	    
-	    n = n.parent;
+	    	}
+	   	 n = n.parent;
 	    }
   
 	    int[] array = new int[CODE.length()];
