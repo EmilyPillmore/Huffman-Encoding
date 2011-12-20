@@ -327,20 +327,14 @@ public class HuffmanTree {
     pq.addAll(symbols.values());
     Node curr = root;
     
-    while(pq.size() >= 2){
-    Node left = pq.remove();
-    Node right = pq.remove();
-    curr =  new Node(left, right);
-    pq.add(curr);
+    while(pq.size() > 1){
+   	Node left = pq.remove();
+    	Node right = pq.remove();
+    	curr =  new Node(left, right);
+    	pq.add(curr);
     //curr = right.parent; curr = left.parent;
-    
     }
     root = pq.remove();
-    
-    
-
-    // FILL IN -- use "pq" to construct a Huffman tree rooted at "root"
-    // TO VISUALIZE the binary trie, use the huffmanToDot method
   }
 
   /**
